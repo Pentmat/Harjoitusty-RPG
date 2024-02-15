@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container-wrapper {
+    display: flex;
+}
+
+.table-container {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.kriittiset {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.kriittiset th, .kriittiset td {
+    border: 1px solid #0f0d0d;
+    padding: 10px;
+    text-align: center;
+}
+
+.kriittiset th:first-child, .kriittiset td:first-child {
+    min-width: 150px;
+}
+
+.kriittiset th:not(:first-child), .kriittiset td:not(:first-child) {
+    width: 25%;
+}
+
+.empty-container {
+    flex-grow: 1;
+    background-color: #fff; /* Set the background color of the empty container */
+}
+
+
+/* Add these styles to highlight the rows */
+tr.highlight {
+    background-color: yellow; /* You can change the color as needed */
+}
+
+/* Add transition effect for a smoother highlight */
+tr.highlight td {
+    transition: background-color 0.5s ease;
+}
+
+
+#resultList {
+    max-height: 200px; /* Set the maximum height as needed */
+    overflow-y: auto; /* Enable vertical scrolling if the content exceeds the maximum height */
+    border: 1px solid #ccc; /* Add border for better visibility */
+    padding: 10px; /* Add padding for better aesthetics */
+}
+
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+    table.kriittiset {
+        width: 100%;
+    }
+
+    table.kriittiset th:not(:first-child), table.kriittiset td:not(:first-child) {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* Responsive Styles for Phones */
+@media (max-width: 480px) {
+    table.kriittiset th, table.kriittiset td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
