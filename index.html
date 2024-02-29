@@ -3,34 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table</title>
+    <title>KERP</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 
-
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">KERP Apuri</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="index.html">Fyysiset Kriittiset</a>
-              <a class="nav-link" href="elemental_crit_table.html">Elementaaliset Kriittiset</a>
+            <a class="navbar-brand" href="#">KERP Apuri</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="index.html">Fyysiset Kriittiset</a>
+                    <a class="nav-link" href="elemental_crit_table.html">Elementaaliset Kriittiset</a>
+                </div>
             </div>
-          </div>
         </div>
-      </nav>
+    </nav>
 
 
-    <div class="container-wrapper">
-        <div class="table-container">
-            <table class="table kriittiset">
+    <div class="container mt-5">
+        
+            <table class="kriittiset">
                
-                <tr>
+                <tr class="table-dark table-active">
                     <th></th>
                     <th>KT-1 KRIITTISTEN RUHJEIDEN TAULUKKO</th>
                     <th>KT-2 KRIITTISTEN VIILTOJEN TAULUKKO</th>
@@ -38,7 +37,7 @@
                     <th>KT-3 KRIITTISTEN KAATOJEN TAULUKKO</th>
                 </tr>
         
-                <tr class ="crit_1">
+                <tr class ="crit_1 ">
                     <th>-49–05</th>
                     <th>Ote lipsuu. ei muuta vahinko. -0 pistettä.</th>
                     <th>+0 pistettä. Heikko isku, ei muuta vaikutusta.</th>
@@ -189,40 +188,44 @@
                     <th>Isku hipaisee kylkeä. +3 pistettä.</th>
                     <th> Isku Käsivarteen. 2+ pistettä. -5 toimiin kaksi kierrosta</th>
                 </tr>
-
+                
 
                    
             </table>
+                  
+
+    </div>
+
+    
+                
+    <div class="sijainti">
+        <div class="choose-critical">
+            <h3>Muutostekijä heittoon</h3>
+            <select class="form-control" id="criticalModifier">
+                <option value="-50">Pi-Kriittinen -50</option>
+                <option value="-20">A-Kriittinen -20</option>
+                <option value="-10">B-Kriittinen -10</option>
+                <option value="0">C-Kriittinen 0</option>
+                <option value="10">D-Kriittinen +10</option>
+                <option value="20">E-Kriittinen +20</option>
+            </select>
+
+            <h3>Lisämuutostekijä:</h3>
+            <input type="number" class="form-control" id="customModifier" placeholder="Syötä oma muutostekijä">
+
         </div>
 
-
-
-
-        <div class="empty-container">
-            <div class="choose-critical">
-                <h3>Muutostekijä heittoon</h3>
-                <select class="form-control" id="criticalModifier">
-                    <option value="-50">Pi-Kriittinen -50</option>
-                    <option value="-20">A-Kriittinen -20</option>
-                    <option value="-10">B-Kriittinen -10</option>
-                    <option value="0">C-Kriittinen 0</option>
-                    <option value="10">D-Kriittinen +10</option>
-                    <option value="20">E-Kriittinen +20</option>
-                </select>
-
-                <h3>Lisämuutostekijä:</h3>
-                <input type="number" class="form-control" id="customModifier" placeholder="Syötä oma muutostekijä">
-
-            </div>
-            <div class="throw-dice">
-                <h3>Throw Dice</h3>
-                <button class="btn btn-primary" onclick="throwDice()">Throw</button>
-                <p id="diceResult">Dice Result: </p>
-                <ul id="resultList"></ul>
-            </div>
+        <div class="throw-dice">
+            <h3>Throw Dice</h3>
+            <button class="btn btn-primary" onclick="throwDice()">Throw</button>
+            <p id="diceResult">Dice Result: </p>
+            <ul id="resultList"></ul>
         </div>
     </div>
 
+
+    
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
