@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
@@ -17,6 +17,8 @@ body {
     border-collapse: collapse;
     border: 2px solid #333;
     border-radius: 8px;
+    
+    
 }
 
 .kriittiset th, .kriittiset td {
@@ -34,28 +36,28 @@ body {
 }
 
 .empty-container {
-    flex-grow: 1;
-    background-color: #fff; /* Set the background color of the empty container */
+    flex-grow: 0.5;
+    background-color: #ffffff; /* Set the background color of the empty container */
+    
 }
 
 
 /* Add these styles to highlight the rows */
 tr.highlight {
-    background-color: yellow; /* You can change the color as needed */
+    background-color: rgb(216, 174, 168); 
 }
 
-/* Add transition effect for a smoother highlight */
+
 tr.highlight td {
     transition: background-color 0.5s ease;
 }
 
 
 #resultList {
-    max-height: 200px; /* Set the maximum height as needed */
-    overflow-y: auto; /* Enable vertical scrolling if the content exceeds the maximum height */
-    border: 1px solid #ccc; /* Add border for better visibility */
-    padding: 10px; /* Add padding for better aesthetics */
-}
+    max-height: 200px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
 
 
 /* Responsive Styles for Tablets */
