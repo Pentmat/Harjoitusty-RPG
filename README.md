@@ -6,6 +6,8 @@ Tämä on kouluharjoitustyöni, jossa tarkoituksena on laskea ja heittää kriit
 Verkkosivu näyttää heiton summan ja tallentaa sen. Ohjelma myös highlightaa oikean kohdan taulukosta
 Projekti on toteutettu verkkosivuna HTML5:n, JavaScriptin ja CSS:n avulla. 
 Roll20 Kopio tietäjät tietää.
+Ei tarkoitettu puhelimen ruudulle!
+
 
 ## Käyttöohjeet
 
